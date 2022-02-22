@@ -24,8 +24,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json())
 // Connect to Mongoose and set connection variable
-// Deprecated: mongoose.connect('mongodb://localhost/resthub');
-mongoose.connect('mongodb://localhost/resthub', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/resthub', { useNewUrlParser: true })
 
 var db = mongoose.connection
 
@@ -35,7 +34,7 @@ else
     console.log('DB connected successfully!')
 
 // Setup server
-let port = process.env.PORT || 8080
+let port = process.env.PORT || 5000
 
 // Send message for default URL
 app.get('/', (req, res) => res.send('Hello World with Express and Nodemon'))

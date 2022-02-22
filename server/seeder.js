@@ -1,10 +1,10 @@
 // Import the model
-let Product = require('./model')
+let Product = require('./app/model')
 // Import mongoose
 let mongoose = require('mongoose')
 
 // Connect to Mongodb
-mongoose.connect('mongodb://localhost/resthub', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/resthub', { useNewUrlParser: true })
 // Define seeds
 let products = [
     new Product({
