@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
 });
 
 // Import API routes
-let apiRoutes = require('./api-routes')
+let apiRoutes = require('./app/routes')
 
 // Configure bodyparser to handle post requests
 app.use(bodyParser.urlencoded({

@@ -17,5 +17,5 @@ let productSchema = mongoose.Schema({
 let Product = module.exports = mongoose.model('product', productSchema)
 
 module.exports.get = function (callback, limit) {
-    Weather.find(callback).limit(limit)
+    Product.find(callback).limit(limit)
 }
