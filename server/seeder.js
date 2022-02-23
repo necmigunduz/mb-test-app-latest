@@ -4,7 +4,7 @@ let Product = require('./app/model')
 let mongoose = require('mongoose')
 
 // Connect to Mongodb
-mongoose.connect('mongodb://localhost:27017/resthub', { useNewUrlParser: true })
+mongoose.connect('mongodb://172.17.0.2:27017/', { useNewUrlParser: true })
 // Define seeds
 let products = [
     new Product({
