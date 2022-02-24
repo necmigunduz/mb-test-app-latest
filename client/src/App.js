@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import FetchData from "./api/fetchData";
 import "./App.css";
 
@@ -13,7 +14,7 @@ function App() {
   useEffect(() => {
     getData();
   }, [products]);
-  let no = 0;
+  
   return (
     <div className="App">
       <table className="table table-hover">
@@ -28,7 +29,7 @@ function App() {
        {products.map(product =>{
          return (
            <tr key={product._id}>
-             <td scope="row">{products.indexOf(product)+1}</td>
+             <td>{products.indexOf(product)+1}</td>
              <td>{product.brand}</td>
              <td>{product.name}</td>
            </tr>
