@@ -34,7 +34,7 @@ else
     console.log('DB connected successfully!')
 
 // Setup server
-let port = process.env.PORT || 8080
+let port = process.env.PORT || 8080 
 
 // Send message for default URL
 app.get('/', (req, res) => res.send('Hello World with Express and Nodemon'))
