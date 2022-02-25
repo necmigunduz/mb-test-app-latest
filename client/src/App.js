@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import Product from "./product/modal";
 import FetchData from "./api/fetchData";
 import "./App.css";
 
@@ -16,13 +16,15 @@ function App() {
   }, [products]);
   
   return (
-    <div className="App">
+<>
+<div className="App">
       <table className="table table-hover">
         <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Product Brand</th>
           <th scope="col">Product Name</th>
+          <th scope="col">Product Details</th>
         </tr>
       </thead>
       <tbody>
@@ -32,12 +34,14 @@ function App() {
              <td>{products.indexOf(product)+1}</td>
              <td>{product.brand}</td>
              <td>{product.name}</td>
+             <td><Product /></td>
            </tr>
          )
        })} 
        </tbody>
       </table>
     </div>
+    </>
   );
 }
 
