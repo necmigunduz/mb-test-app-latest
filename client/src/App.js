@@ -28,13 +28,13 @@ function App() {
         </tr>
       </thead>
       <tbody>
-       {products.map(product =>{
+       {products && products.map((product) =>{
          return (
            <tr key={product._id}>
              <td>{products.indexOf(product)+1}</td>
              <td>{product.brand}</td>
              <td>{product.name}</td>
-             <td>
+             <td key={product.id}> 
               <Product
               pName={product.name}
               pBrand={product.brand}

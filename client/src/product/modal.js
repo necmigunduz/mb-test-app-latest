@@ -15,31 +15,31 @@ const customStyles = {
 function Product(props) {
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [total, setTotal] =useState(0);
+  let [total, setTotal] = useState(Number);
   const { pName, pPrice, pAmount, pBrand, pDesc, pColor } = props;
 
-  function openModal() {
+  const openModal = () => {
     setIsOpen(true);
   }
 
-  function afterOpenModal() {
+  const afterOpenModal = () => {
     subtitle.style.color = "#f00";
   }
 
-  function closeModal() {
+  const closeModal = () => {
     setIsOpen(false);
   }
 
-  // function handleTotal(){
-  //   console.log(total)
-  //   total += 1;
-  //   setTotal(total);
-  // }
+  const handleTotal = () => {
+    setTotal(total + 1)
+    console.log(total)
+  }
 
   return (
     <div>
-      <button onClick={openModal}>Open Modal</button>
+      <button onClick={openModal} className="btn btn-secondary">Open Modal</button>
       <Modal
+        ariaHideApp={false}
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
@@ -51,13 +51,17 @@ function Product(props) {
           {pName} Details
         </h2>
         <p>{pDesc}</p>
-        <p><strong>Color:</strong> {pColor}</p>
         <p>
-          <strong>Price:</strong> {pPrice}
+          <strong>Color:</strong> {pColor}
+        </p>
+        <p>
+          <strong>Price:</strong> ${pPrice}
         </p>
         <div>
-          <button className="p-2 btn btn-primary">Add to Shopping Card</button>
-          <button onClick={closeModal} className="p-2 m-3 btn btn-primary">close</button>
+          <button className="p-2 btn btn-primary" onClick={() => handleTotal()}>Add to Shopping Card</button>
+          <button onClick={closeModal} className="p-2 m-3 btn btn-primary">
+            Close
+          </button>
         </div>
       </Modal>
     </div>
