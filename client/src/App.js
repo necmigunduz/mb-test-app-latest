@@ -34,7 +34,14 @@ function App() {
              <td>{products.indexOf(product)+1}</td>
              <td>{product.brand}</td>
              <td>{product.name}</td>
-             <td><Product /></td>
+             <td>
+              <Product
+              pName={product.name}
+              pBrand={product.brand}
+              pColor={product.color}
+              pDesc={product.desc}
+              pPrice={product.price}
+             /></td>
            </tr>
          )
        })} 
