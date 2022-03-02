@@ -32,7 +32,7 @@ const Product = (props) => {
   return (
     <div>
       <button onClick={openModal} className="btn btn-secondary">
-        Open Modal
+        See product details
       </button>
       <Modal
         ariaHideApp={false}
