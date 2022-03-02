@@ -12,10 +12,9 @@ const customStyles = {
   },
 };
 
-function Product(props) {
+const Product = (props) => {
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
-  let [total, setTotal] = useState(Number);
   const { pName, pPrice, pAmount, pBrand, pDesc, pColor } = props;
 
   const openModal = () => {
@@ -28,11 +27,6 @@ function Product(props) {
 
   const closeModal = () => {
     setIsOpen(false);
-  }
-
-  const handleTotal = () => {
-    setTotal(total + 1)
-    console.log(total)
   }
 
   return (
@@ -58,7 +52,7 @@ function Product(props) {
           <strong>Price:</strong> ${pPrice}
         </p>
         <div>
-          <button className="p-2 btn btn-primary" onClick={() => handleTotal()}>Add to Shopping Card</button>
+          <button className="p-2 btn btn-primary" onClick={props.clickHandle}>Add to Shopping Card</button>
           <button onClick={closeModal} className="p-2 m-3 btn btn-primary">
             Close
           </button>

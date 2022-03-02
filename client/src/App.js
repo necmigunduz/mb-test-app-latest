@@ -1,15 +1,22 @@
 import React, { Component } from "react";
 import Product from "./product/modal";
-import FetchData from "./api/fetchData";
 import "./App.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: []
+      products: [],
+      total: 0
     };
   }
+
+  handleClick = () => {
+    this.setState({
+      total: this.state.total + 1
+    })
+    console.log(this.state.total)
+  };
 
   componentDidMount() {
     fetch("http://localhost:8080/api/products", {
@@ -47,6 +54,7 @@ class App extends Component {
                       <td>{product.name}</td>
                       <td key={product.id}>
                         <Product
+                          clickHandle={this.handleClick}
                           pName={product.name}
                           pBrand={product.brand}
                           pColor={product.color}
