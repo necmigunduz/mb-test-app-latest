@@ -12,9 +12,16 @@ class App extends Component {
     };
   }
 
-  handleClick = () => {
+  handleClickIncrement = () => {
     this.setState({
       total: this.state.total + 1
+    })
+    console.log(this.state.total)
+  };
+
+  handleClickDecrement = () => {
+    this.setState({
+      total: this.state.total - 1
     })
     console.log(this.state.total)
   };
@@ -57,7 +64,9 @@ class App extends Component {
                       <td>{product.name}</td>
                       <td key={product.id}>
                         <Product
-                          clickHandle={this.handleClick}
+                          parentToChild={total}
+                          clickHandleIncrement={this.handleClickIncrement}
+                          clickHandleDecrement={this.handleClickDecrement}
                           pName={product.name}
                           pBrand={product.brand}
                           pColor={product.color}
