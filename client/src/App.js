@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Product from "./product/modal";
+import TopNav from "./topNav/topNav";
 import "./App.css";
 
 class App extends Component {
@@ -33,8 +34,10 @@ class App extends Component {
   }
 
   render() {
+    const { total } = this.state;
     return (
       <>
+        <TopNav parentToChild={total}/>
         <div className="App">
           <table className="table table-hover">
             <thead>
