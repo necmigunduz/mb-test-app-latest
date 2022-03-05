@@ -21,9 +21,9 @@ const Product = (props) => {
     setIsOpen(true);
   };
 
-  const afterOpenModal = () => {
-    subtitle.style.color = "#f00";
-  };
+  // const afterOpenModal = () => {
+  //   subtitle.style.color = "#f00";
+  // };
 
   const closeModal = () => {
     setIsOpen(false);
@@ -37,7 +37,7 @@ const Product = (props) => {
       <Modal
         ariaHideApp={false}
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
+        // onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
