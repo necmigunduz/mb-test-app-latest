@@ -56,10 +56,10 @@ exports.update = function(req, res) {
         if (err)
             res.json(err)
         product.name = req.body.name ? req.body.name : product.name
-        product.brand = req.body.brand
-        product.desc = req.body.desc
-        product.color = req.body.color
-        product.price = req.body.price
+        product.brand = req.body.brand ? req.body.brand : product.brand
+        product.desc = req.body.desc ? req.body.desc : product.desc
+        product.color = req.body.color ? req.body.color : product.color
+        product.price = req.body.price ? req.body.price : product.price
         product.amount = req.body.amount
         // Save the updated product
         product.save(function(err){

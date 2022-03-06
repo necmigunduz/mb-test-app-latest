@@ -13,17 +13,12 @@ const customStyles = {
 };
 
 const Product = (props) => {
-  let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
   const { pName, pPrice, pBrand, pDesc, pColor } = props;
 
   const openModal = () => {
     setIsOpen(true);
   };
-
-  // const afterOpenModal = () => {
-  //   subtitle.style.color = "#f00";
-  // };
 
   const closeModal = () => {
     setIsOpen(false);

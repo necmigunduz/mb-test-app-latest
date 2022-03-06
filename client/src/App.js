@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "./product/modal";
+import Product from "./product/product";
 import TopNav from "./topNav/topNav";
 import "./App.css";
 
@@ -12,7 +12,7 @@ class App extends Component {
       total2: 0,
       total3: 0,
       total4: 0,
-      total5: 0,
+      total5: 0
     };
   }
 
@@ -98,7 +98,6 @@ class App extends Component {
   }
 
   render() {
-    const { total } = this.state;
     return (
       <>
         <TopNav parentToChild={this.state.total1+this.state.total2+this.state.total3+this.state.total4+this.state.total5} />

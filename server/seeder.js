@@ -13,7 +13,7 @@ let products = [
         desc: 'This product is sold only in Apple stores!',
         color: 'red',
         price: 500,
-        amount: 1
+        amount: 0
     }),
     new Product({
         name: 'IPhone7',
@@ -21,7 +21,7 @@ let products = [
         desc: 'This product is sold only in Apple stores!',
         color: 'red',
         price: 700,
-        amount: 1
+        amount: 0
     }),
     new Product({
         name: 'IPhone8',
@@ -29,7 +29,7 @@ let products = [
         desc: 'This product is sold only in Apple stores!',
         color: 'red',
         price: 900,
-        amount: 1
+        amount: 0
     }),
     new Product({
         name: 'IPhone9',
@@ -37,7 +37,7 @@ let products = [
         desc: 'This product is sold only in Apple stores!',
         color: 'red',
         price: 1200,
-        amount: 1
+        amount: 0
     }),
     new Product({
         name: 'IPhone10',
@@ -45,7 +45,7 @@ let products = [
         desc: 'This product is sold only in Apple stores!',
         color: 'red',
         price: 1500,
-        amount: 1
+        amount: 0
     }),    
 ]
 
