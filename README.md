@@ -1,5 +1,5 @@
 # Products List App
-This project is developed as a takehome project. It is a basic products list application. This project has two sides: 'server' and 'client'. 'server' is the back-end Api where the information of products are stored and a seeder is created to add some products to the api. 'client' displays the list of products on explorer. A user can click on see product details buttona and add products to their shopping cart. The product modal shows the information of product with two buttons add and remove.
+This project is developed as a takehome project. It is a basic products list application. This project has two sides: 'server' and 'client'. 'server' is the back-end Api where the information of products are stored and a seeder is created to add some products to the api. 'client' displays the list of products on explorer. A user can click on see product detail buttons and add products to their shopping cart. The product modal shows the information of product with two buttons add and remove.
 
 ![screenshot](https://github.com/necmigunduz/mb-test-app-latest/blob/master/assets/server.png)
 ![screenshot](https://github.com/necmigunduz/mb-test-app-latest/blob/master/assets/client-I.png)
